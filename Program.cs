@@ -1,6 +1,6 @@
 ﻿
 
-//// Задание 1
+// // Задание 1
 
 // void Counter(int m, int n)
 // {
@@ -13,13 +13,13 @@
 // }
 
 
-// Console.Write("Введите значение M: ");
+// Console.Write("Введите натуральное число M: ");
 // int m = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите значение N: ");
+// Console.Write("Введите натуральное число N: ");
 // int n = Convert.ToInt32(Console.ReadLine());
 
-// m += 1;
-// n -= 1;
+// m += 1; //Если нужно вывести не включая M и N
+// n -= 1; //Если нужно вывести не включая M и N 
 
 // Counter(m, n);
 
@@ -63,6 +63,23 @@
 
 ///// Задание 3
 
+
+void ReArray(int[] array, int x)
+{
+   
+    if (x < 0)
+    {
+      return;
+    }
+    System.Console.Write($"{array[x]} ");
+    
+    ReArray(array, x - 1);  
+}
+
+
+int[] array = { 1, 2, 3, 4, 5, 6, 7 };
+int i = array.Length - 1;
+ReArray(array, i);
 
 
 
